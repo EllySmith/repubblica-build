@@ -11,7 +11,7 @@ function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <div className="font-eugenio min-h-screen">
+    <div className="min-h-screen">
       <MainTitle />
       <Header />
       <div className="lg:flex block mx-2 lg:m-4 border-2 border-black">
