@@ -6,10 +6,10 @@ import NavigationBox from './Components/NavigationBox';
 
 function App() {
   return (
-    <div>
+    <div className='font-eugenio'>
       <MainTitle />
       <Header />
-      <div className='flex'> <ArticleBox />
+      <div className='flex m-4 border-2 border-black'> <ArticleBox />
       <NavigationBox />
       </div>
       </div>

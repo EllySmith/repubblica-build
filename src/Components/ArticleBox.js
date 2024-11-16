@@ -1,9 +1,17 @@
 import React from 'react'
+import BigArticle from './ArticleBox/BigArticle'
+import FirstLine from './ArticleBox/FirstLine'
+import SmallArticle from './ArticleBox/SmallArticle'
 
 function ArticleBox() {
   return (
-    <div className="w-4/5 h-[100vh] m-6 h-full border-2 border-black p-4 shaddow-sm">
-      BOX
+    <div className="w-5/6 h-full pt-8 pb-8 pl-2 pr-2 border-black flex flex-wrap flex-grow items-stretch justify-evenly">
+      <BigArticle />
+      <SmallArticle />
+      <FirstLine />
+      <SmallArticle />
+      <SmallArticle />
+      <SmallArticle />
     </div>
   )
 }
