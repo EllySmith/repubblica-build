@@ -1,23 +1,39 @@
 import React from 'react'
+import { useState } from 'react';
 import HeaderMenuCategory from './HeaderComponents.js/HeaderMenuCathegory'
 import HeaderMenuBreaking from './HeaderComponents.js/HeaderMenuBreaking'
 
 function Header() {
-  const articles = ['Sezioni', 'Edizioni Locali', 'Il Quotidiano', 'Servizi', 'A-Z']
-  const breaking = ['Regionnali - Poggio Mirteto', 'Ucraina', 'Israele', 'Roma:Lazio - 4:0', 'Elon Musk ha detto le cose']
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const articles = ['Sezioni', 'Edizioni Locali', 'Il Quotidiano', 'Servizi', 'A-Z'];
+  const breaking = ['Regionnali - Poggio Mirteto', 'Ucraina', 'Israele', 'Roma:Lazio - 4:0', 'Elon Musk ha detto le cose'];
+
   return (
-    <div>
-      <div className='flex justify-center space-x-4 my-4 font-eugenio font-bold'>
-        {articles.map((article) => <HeaderMenuCategory item={article} />)}
+    <div className="border-b border-black">
+      <button 
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+        className="lg:hidden w-full text-left p-4 bg-gray-100"
+      >
+        Menu
+      </button>
+      
+      <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:block`}>
+        <div className="lg:flex flex-wrap justify-center space-y-2 lg:space-y-0 lg:space-x-4 my-4 font-bold">
+          {articles.map((article, index) => (
+            <HeaderMenuCategory key={index} item={article} />
+          ))}
+        </div>
       </div>
 
-      <div className='flex justify-center items-center space-x-4 my-4 bg-gray-200 h-[5vh] border-t-2 border-b-2 border-black font-eugenio'>
-        {breaking.map((article) => <HeaderMenuBreaking item={article} />)}
+      <div className="overflow-x-auto">
+        <div className="flex whitespace-nowrap justify-start lg:justify-center items-center space-x-4 my-4 bg-gray-200 h-[5vh] border-t-2 border-b-2 border-black px-4">
+          {breaking.map((article, index) => (
+            <HeaderMenuBreaking key={index} item={article} />
+          ))}
+        </div>
       </div>
-
     </div>
-
-  )
+  );
 }
 
 export default Header

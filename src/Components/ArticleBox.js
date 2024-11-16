@@ -5,7 +5,7 @@ import SmallArticle from './ArticleBox/SmallArticle'
 
 function ArticleBox() {
   return (
-    <div className="w-5/6 h-full pt-8 pb-8 pl-2 pr-2 border-black flex flex-wrap flex-grow items-stretch justify-evenly">
+    <div className="lg:w-5/6 w-full h-full pt-8 pb-8 px-2 border-black flex flex-wrap flex-grow items-stretch justify-evenly">
       <BigArticle />
       <SmallArticle />
       <FirstLine />
@@ -13,7 +13,7 @@ function ArticleBox() {
       <SmallArticle />
       <SmallArticle />
     </div>
-  )
+  );
 }
 
 export default ArticleBox
