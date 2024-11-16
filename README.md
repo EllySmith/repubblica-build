@@ -1,0 +1,1 @@
+Nuovo bild template per LaRepubblica, perché quello attuale è brutto.
