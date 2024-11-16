@@ -33,8 +33,20 @@ app.get('/fetch-page', async (req, res) => {
       }
     });
 
+    const menuItems = [];
+
+    $('ul.hot-topics__list li a').each((index, element) => {
+      const linkText = $(element).text().trim();
+      const linkAddress = $(element).attr('href');
+
+      if (linkText && linkAddress) {
+        menuItems.push({ text: linkText, url: linkAddress });
+      }
+    });
+
     const pageState = {
-      articles: articles,
+      articles,
+      menuItems,
     };
 
     res.json(pageState);

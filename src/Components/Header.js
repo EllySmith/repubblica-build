@@ -2,11 +2,12 @@ import React from 'react'
 import { useState } from 'react';
 import HeaderMenuCategory from './HeaderComponents.js/HeaderMenuCathegory'
 import HeaderMenuBreaking from './HeaderComponents.js/HeaderMenuBreaking'
+import { useSelector } from 'react-redux';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const articles = ['Sezioni', 'Edizioni Locali', 'Il Quotidiano', 'Servizi', 'A-Z'];
-  const breaking = ['Regionnali - Poggio Mirteto', 'Ucraina', 'Israele', 'Roma:Lazio - 4:0', 'Elon Musk ha detto le cose'];
+  const breaking = useSelector((state) => state.content.menuItems)
 
   return (
     <div className="border-b border-black">

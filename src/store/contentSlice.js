@@ -5,7 +5,9 @@ export const fetchPageState = () => async (dispatch) => {
   try {
     const response = await axios.get('http://localhost:3001/fetch-page');
     const articles = response.data.articles;
+    const menuItems = response.data.menuItems;
     dispatch(addArticles(articles));
+    dispatch(addMenuItems(menuItems));
   } catch (error) {
     console.error('Error fetching page:', error);
   }
@@ -14,22 +16,7 @@ export const fetchPageState = () => async (dispatch) => {
 
 const initialState = {
      articles: [],
-     chosenTag: null,
-     tags: [
-          'economia', 'politica', 'attualità', 'arte', 'società', 'sport', 'calcio',
-          'tecnologia', 'scienza', 'salute', 'ambiente', 'cultura', 'musica',
-          'cinema', 'teatro', 'letteratura', 'viaggi', 'cibo', 'moda',
-          'storia', 'educazione', 'finanza', 'lavoro', 'immigrazione', 'religione',
-          'sicurezza', 'innovazione', 'startup', 'clima', 'ecologia', 'diritti umani',
-          'fotografia', 'automobili', 'motori', 'videogiochi', 'social media',
-          'televisione', 'intrattenimento', 'fotografia', 'fitness', 'benessere',
-          'spettacolo', 'giustizia', 'famiglia', 'psicologia', 'filosofia', 'scuola',
-          'università', 'pandemia', 'vaccini', 'guerra', 'terrorismo', 'diplomazia',
-          'criptovalute', 'borsa', 'mercato', 'investimenti', 'real estate',
-          'turismo', 'eventi', 'fiere', 'festival', 'tecniche', 'robotica',
-          'intelligenza artificiale', 'machine learning', 'blockchain',
-          'cybersecurity', 'privacy', 'diritto', 'legislazione', 'politiche sociali'
-     ],
+     menuItems: [],
 };
 
 const modalSlice = createSlice({
@@ -40,6 +27,10 @@ const modalSlice = createSlice({
                ...state,
                choseTag: action.payload,
           }),
+          addMenuItems: (state, action) => ({
+               ...state,
+               menuItems: action.payload,
+          }),
           addArticles: (state, action) => ({
                ...state,
                articles: action.payload,
@@ -47,5 +38,5 @@ const modalSlice = createSlice({
      },
 });
 
-export const { choseTag, addArticles } = modalSlice.actions;
+export const { choseTag, addArticles, addMenuItems } = modalSlice.actions;
 export default modalSlice.reducer;
