@@ -5,12 +5,6 @@ const cors = require('cors');
 const app = express();
 const port = 3001;
 
-const getRandomImportance = () => {
-  const importanceLevels = ['low', 'normal', 'breaking'];
-  const randomIndex = Math.floor(Math.random() * importanceLevels.length);
-  return importanceLevels[randomIndex];
-};
-
 app.use(cors());
 
 app.get('/fetch-page', async (req, res) => {
@@ -21,13 +15,18 @@ app.get('/fetch-page', async (req, res) => {
     $('article.entry').each((index, element) => {
       const body = $(element).find('.entry__title a').text().trim();
 
-      const title = $(element).find('.entry__overtitle').text().trim();
+      const title = $(element).find('.entry__overtitle').text().trim().toUpperCase();
 
       const imageUrl = $(element).find('.entry__media picture source').first().attr('srcset') || '';
       const cleanImageUrl = imageUrl.replace(/(\?webp)$/, '');
 
       const id = Math.floor(Math.random() * (1 -  100000));
-      const importance = getRandomImportance();
+      let importance;
+      if (index % 10 === 4) {
+        importance = 'breaking';
+      } else {
+        importance = 'low';
+      }
 
       if (title && body && cleanImageUrl) {
         articles.push({ title, body, imageUrl, id, importance });
