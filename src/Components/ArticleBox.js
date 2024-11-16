@@ -4,6 +4,7 @@ import BigArticle from './ArticleBox/BigArticle';
 import FirstLine from './ArticleBox/FirstLine';
 import SmallArticle from './ArticleBox/SmallArticle';
 import { fetchPageState } from '../store/contentSlice';
+import LoadingMessage from './ArticleBox/LoadingMessage';
 
 function ArticleBox() {
   const dispatch = useDispatch();
@@ -27,8 +28,8 @@ function ArticleBox() {
           }
           return null;
         })
-      ) : (
-        <p>Loading articles... Make sure the server is running.</p>
+      ) : ( 
+      <LoadingMessage />
       )}
     </div>
   );
