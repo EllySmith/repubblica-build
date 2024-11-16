@@ -6,6 +6,7 @@ import Header from './Components/Header'
 import MainTitle from './Components/MainTitle';
 import NavigationBox from './Components/NavigationBox';
 
+
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
