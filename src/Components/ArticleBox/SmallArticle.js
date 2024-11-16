@@ -1,12 +1,14 @@
 import React from 'react'
 
-function SmallArticle() {
-  return (
-     <div className="w-2/6 p-4 border box-border">
-     <h1>Article Title</h1>
-     <p>Very interesting text</p>
-   </div>
-  )
+function SmallArticle({ item }) {
+     const { title, body, tags } = item;
+     return (
+          <div className="w-2/6 p-4 border box-border">
+               <h1>{title}</h1>
+               <p>{body}</p>
+               <p className='text-xs'> {tags.join(' ')}</p>
+          </div>
+     )
 }
 
 export default SmallArticle
