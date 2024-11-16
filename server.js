@@ -14,6 +14,7 @@ app.get('/fetch-page', async (req, res) => {
     const articles = [];
     $('article.entry').each((index, element) => {
       const body = $(element).find('.entry__title a').text().trim();
+      const link = $(element).find('.entry__title a').attr('href');
 
       const title = $(element).find('.entry__overtitle').text().trim().toUpperCase();
 
@@ -29,7 +30,7 @@ app.get('/fetch-page', async (req, res) => {
       }
 
       if (title && body && cleanImageUrl) {
-        articles.push({ title, body, imageUrl, id, importance });
+        articles.push({ title, body, imageUrl, id, importance, link });
       }
     });
 

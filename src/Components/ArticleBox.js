@@ -13,6 +13,8 @@ function ArticleBox() {
     dispatch(fetchPageState());
   }, [dispatch]);
 
+  console.log(articles);
+
   return (
     <div className="lg:w-full w-full h-full pt-8 pb-8 px-4 flex flex-wrap gap-y-8">
       {articles.length > 0 ? (

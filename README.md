@@ -1,9 +1,26 @@
 # Nuovo Build Template per LaRepubblica
 
-Il template attuale di La Repubblica è orrendo, quindi l'ho rifatto! 🚧
-Tra l'altro, qualcuno ha acquistato il dominio `larepubblica.it` e adesso l'indirizzo porta al negozio di tè 🥰☕
+The build template of La Repubblica is qwful, so I made a nnew one! 🚧
 
-La app scarica le notizie della home di 'repubblica.it' e construisce una pagina che non fa male agli occhi.
+The app is scraping data from 'repubblica.it' homepage and constructs a new home with better design.
+
+# Technology Used
+
+## React
+- App construction
+
+## Redux
+- State management
+
+## Express.js
+- Server for data fetching
+
+## Cheerio and CORS
+- HTML parsing and handling cross-origin requests
+
+## Tailwind
+- Styling
+
 
 **IN COSTRUZIONE**  
 Visita il link al momento:  
