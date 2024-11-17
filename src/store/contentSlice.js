@@ -17,7 +17,7 @@ export const fetchPageState = () => async (dispatch) => {
 const initialState = {
      articles: [],
      menuItems: [],
-     headerMenuItems: ['Sezioni', 'Edizioni Locali', 'Il Quotidiano', 'Servizi', 'A-Z'],
+     headerMenuItems: [{name: 'Sezioni', contents: []}, {name: 'Edizioni Locali', contents: null}, {name: 'Il Quotidiano', contents: null}, {name: 'Servizi', contents: null}, {name: 'A-Z', contents: null}],
      sideBar: [
           { category: "Politica", link: "https://www.repubblica.it/politica/?ref=RHHD-MS" },
           { category: "Economia", link: "https://www.repubblica.it/economia/?ref=RHHD-MS" },

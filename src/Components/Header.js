@@ -8,6 +8,7 @@ function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const headerMenuItems = useSelector((state) => state.content.headerMenuItems)
   const breaking = useSelector((state) => state.content.menuItems)
+  console.log('headermenu', headerMenuItems);
 
   return (
     <div className="border-b border-black">
@@ -20,8 +21,8 @@ function Header() {
       
       <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:block relative`}>
         <div className="lg:flex flex-wrap justify-center space-y-2 lg:space-y-0 lg:space-x-4 my-4 font-bold z-0">
-          {headerMenuItems.map((article, index) => (
-            <HeaderMenuCategory key={index} item={article} />
+          {headerMenuItems.map((item, index) => (
+            <HeaderMenuCategory key={index} item={item} />
           ))}
         </div>
       </div>
