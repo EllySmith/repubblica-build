@@ -77,6 +77,7 @@ app.get('/scrape', async (req, res) => {
       title,
       date,
       body,
+      link: url,
     });
 
   } catch (error) {

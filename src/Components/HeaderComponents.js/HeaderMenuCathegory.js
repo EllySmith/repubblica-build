@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 function HeaderMenuCategory({ item }) {
   const navItems = useSelector((state) => state.content.sideBar);
-  const menuItems = item.name === 'Sezioni' ? navItems : [{ category: 'One', link: null }];
+  const menuItems = item.name === 'Sezioni' ? navItems : item.contents;
   
   const [isOpen, setIsOpen] = useState(false);
 

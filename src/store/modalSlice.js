@@ -21,8 +21,7 @@ const initialState = {
   title: null,
   body: null,
   date: null,
-  status: 'idle',
-  error: null,
+  link: null,
 };
 
 const modalSlice = createSlice({
@@ -49,6 +48,7 @@ const modalSlice = createSlice({
         state.title = action.payload.title;
         state.body = action.payload.body;
         state.date = action.payload.date;
+        state.link = action.payload.link;
       })
       .addCase(fetchScrapedData.rejected, (state, action) => {
         state.status = 'failed';

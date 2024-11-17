@@ -17,7 +17,20 @@ export const fetchPageState = () => async (dispatch) => {
 const initialState = {
      articles: [],
      menuItems: [],
-     headerMenuItems: [{name: 'Sezioni', contents: []}, {name: 'Edizioni Locali', contents: null}, {name: 'Il Quotidiano', contents: null}, {name: 'Servizi', contents: null}, {name: 'A-Z', contents: null}],
+     headerMenuItems: [{name: 'Sezioni', contents: []},
+     {name: 'Edizioni Locali', contents: 
+          [{category: 'Bari', link: "https://bari.repubblica.it/"},
+          {category: 'Bologna', link: "https://bologna.repubblica.it/"},
+          {category: 'Firenze', link: "https://firenze.repubblica.it/"},
+          {category: 'Genova', link: "https://genova.repubblica.it/"},
+          {category: 'Milano', link: "https://milano.repubblica.it/"},
+          {category: 'Napoli', link: "https://napoli.repubblica.it/"},
+          {category: 'Palermo', link: "https://palermo.repubblica.it/"},
+          {category: 'Parma', link: "https://parma.repubblica.it/"},
+          {category: 'Roma', link: "https://roma.repubblica.it/"},
+          {category: 'Torino', link: "https://torino.repubblica.it/"}
+          ]}
+          ],
      sideBar: [
           { category: "Politica", link: "https://www.repubblica.it/politica/?ref=RHHD-MS" },
           { category: "Economia", link: "https://www.repubblica.it/economia/?ref=RHHD-MS" },
