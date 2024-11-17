@@ -1,7 +1,7 @@
 import React from 'react';
 import dayjs from 'dayjs';
 import { useSelector, useDispatch } from 'react-redux';
-import { toggleModal } from '../store/modalSlice';
+import { toggleModal } from '../../store/modalSlice';
 
 function Modal() {
      const dispatch = useDispatch();

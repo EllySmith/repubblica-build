@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import BigArticle from './ArticleBox/BigArticle';
-import FirstLine from './ArticleBox/FirstLine';
-import { fetchPageState } from '../store/contentSlice';
-import LoadingMessage from './ArticleBox/LoadingMessage';
+import BigArticle from './BigArticle';
+import FirstLine from './FirstLine';
+import { fetchPageState } from '../../store/contentSlice';
+import LoadingMessage from './LoadingMessage';
 
 function ArticleBox() {
   const dispatch = useDispatch();

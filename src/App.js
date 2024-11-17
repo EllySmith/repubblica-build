@@ -1,11 +1,11 @@
 import './App.css';
 import { useState } from 'react';
 import { Menu } from 'lucide-react'
-import ArticleBox from './Components/ArticleBox';
-import Header from './Components/Header'
-import MainTitle from './Components/MainTitle';
-import NavigationBox from './Components/NavigationBox';
-import Modal from './Components/Modal';
+import ArticleBox from './Components/ArticleBox/ArticleBox';
+import Header from './Components/HeaderComponents/Header'
+import MainTitle from './Components/HeaderComponents/MainTitle';
+import NavigationBox from './Components/NavigationBox/NavigationBox';
+import Modal from './Components/Modal/Modal';
 
 
 function App() {

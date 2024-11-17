@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
-import HeaderMenuCategory from './HeaderComponents.js/HeaderMenuCathegory'
-import HeaderMenuBreaking from './HeaderComponents.js/HeaderMenuBreaking'
+import HeaderMenuCategory from './HeaderMenuCathegory'
+import HeaderMenuBreaking from './HeaderMenuBreaking'
 import { useSelector } from 'react-redux';
 
 function Header() {

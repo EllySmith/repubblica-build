@@ -1,5 +1,5 @@
 import React from 'react';
-import NavigationItem from './NavigationBox/NavigationItem';
+import NavigationItem from './NavigationItem';
 
 function NavigationBox({ isMobileMenuOpen }) {
   const veryImportantSide = ['Economia', 'Politica', 'Arte', 'Calcio', 'Proteste', 'Roma', 'Clima'];
