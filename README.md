@@ -1,41 +1,50 @@
-# Nuovo Build Template per LaRepubblica
+🚧 🚧 🚧 **UNDER CONSTRUCTION** 🚧 🚧 🚧
 
-The build template of La Repubblica is qwful, so I made a nnew one! 🚧
+## New Build Template for LaRepubblica
 
-The app is scraping data from 'repubblica.it' homepage and constructs a new home with better design.
+The build template of La Repubblica is awfulnot good, so I made a new one!
 
-# Technology Used
+The app is scraping data from 'repubblica.it' homepage and constructs a new page with better design. Only free contet is available. Navigation menu links lead to the original website.
 
-## React
+## Technology Used
+
+# React
 - App construction
 
-## Redux
+# Redux
 - State management
 
-## Express.js
+# Express.js
 - Server for data fetching
 
-## Cheerio and CORS
+# Cheerio and CORS
 - HTML parsing and handling cross-origin requests
 
-## Tailwind
-- Styling
+# Tailwind
+- Styling and cross browser adaptation
 
 
-**IN COSTRUZIONE**  
-Visita il link al momento:  
+Deployment (only) static components work, for data fetching run the server:
 [https://repubblica-build.vercel.app/](https://repubblica-build.vercel.app/)
 
 ## Installation Instructions
 
 Follow these steps to set up and run the project locally.
 
-### 1. Run the Server
+### 1. Clone the repository
+
+Open terminal and clone the repository
+
+git clone git@github.com:EllySmith/repubblica-build.git
+
+### 2. Run the Server
 
 First, start the backend server by running the following command:
 
 node server.js
 
-### 1. Run the App
+### 3. Run the App
+
+Now start the web app 
 
 npm start
