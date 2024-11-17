@@ -1,10 +1,19 @@
-import React from 'react';
+import { useDispatch } from 'react-redux';
+import { toggleModal, fetchScrapedData } from '../../store/modalSlice'
 
 function BigArticle({ item }) {
-  const { title, body, imageUrl } = item;
+  const dispatch = useDispatch();
+  const { title, body, imageUrl, link } = item;
+
+  const handleModal = async (url) => {
+  dispatch(fetchScrapedData(url));
+  dispatch(toggleModal());
+  };
+
 
   return (
-    <article className="flex flex-col lg:flex-row gap-4 bg-white shadow-lg border-t-2 border-black overflow-hidden h-full transform transition-transform duration-300 ease-in-out hover:scale-105">
+    <article className="flex flex-col lg:flex-row gap-4 bg-white shadow-lg border-t-2 border-black overflow-hidden h-full transform transition-transform duration-300 ease-in-out hover:scale-105"
+    onClick={() => handleModal(link)}>
       <div className="w-full lg:w-1/3">
         <picture>
           <source type="image/webp" srcSet={imageUrl} />

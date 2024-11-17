@@ -5,6 +5,7 @@ import ArticleBox from './Components/ArticleBox';
 import Header from './Components/Header'
 import MainTitle from './Components/MainTitle';
 import NavigationBox from './Components/NavigationBox';
+import Modal from './Components/Modal';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Menu size={24} />
         </button>
       </div>
+      <Modal />
     </div>
   );
 }

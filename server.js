@@ -68,9 +68,10 @@ app.get('/scrape', async (req, res) => {
     const response = await axios.get(url);
     const $ = cheerio.load(response.data);
 
-    const title = $('story__title').text();
-    const date = $('time.story__date').attr('datetime') || $('time.story__date').text();
-    const body = $('story__summary').text();
+    const title = $('.story__title').text().trim();
+    const date = $('time.story__date').attr('datetime') || $('time.story__date').text().trim();
+    const body = $('.story__summary').text().trim();
+
 
     res.json({
       title,
