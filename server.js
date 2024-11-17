@@ -57,6 +57,33 @@ app.get('/fetch-page', async (req, res) => {
   }
 });
 
+app.get('/scrape', async (req, res) => {
+  const { url } = req.query;
+
+  if (!url) {
+    return res.status(400).json({ error: 'URL is required' });
+  }
+
+  try {
+    const response = await axios.get(url);
+    const $ = cheerio.load(response.data);
+
+    const title = $('story__title').text();
+    const date = $('time.story__date').attr('datetime') || $('time.story__date').text();
+    const body = $('story__summary').text();
+
+    res.json({
+      title,
+      date,
+      body,
+    });
+
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to scrape the website' });
+  }
+});
+
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });

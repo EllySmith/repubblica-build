@@ -53,14 +53,10 @@ const initialState = {
      ],
 };
 
-const modalSlice = createSlice({
+const contentSlice = createSlice({
      name: 'content',
      initialState,
      reducers: {
-          choseTag: (state, action) => ({
-               ...state,
-               choseTag: action.payload,
-          }),
           addMenuItems: (state, action) => ({
                ...state,
                menuItems: action.payload,
@@ -72,5 +68,5 @@ const modalSlice = createSlice({
      },
 });
 
-export const { choseTag, addArticles, addMenuItems } = modalSlice.actions;
-export default modalSlice.reducer;
+export const { choseTag, addArticles, addMenuItems } = contentSlice.actions;
+export default contentSlice.reducer;
