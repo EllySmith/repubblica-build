@@ -1,9 +1,11 @@
 module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
       fontFamily: {
-        'eugenio': ['Eugenio Sans Text', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
+        eugenio: ['"Eugenio Sans Text Web Med Regular"', 'Helvetica Neue', 'Helvetica', 'sans-serif'],
       },
     },
   },

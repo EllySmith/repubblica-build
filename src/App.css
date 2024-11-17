@@ -1,10 +1,4 @@
-/* src/index.css or src/App.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url(https://db.onlinewebfonts.com/c/1b7c7ec2fd4befaa0e4b36b8d86cbb13?family=Eugenio+Sans+Text+Web+Reg+Regular);
-
-body {
-  font-family: "Eugenio Sans Text Web Reg Regular";;
-}

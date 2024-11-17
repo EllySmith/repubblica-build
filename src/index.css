@@ -1,10 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Eugenio+Sans+Text&display=swap');
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@font-face {
+  font-family: "Eugenio Sans Text Web Med Regular";
+  src: url("https://db.onlinewebfonts.com/t/067e2e62633e6ae50defcdee98ae4b11.eot");
+  src: url("https://db.onlinewebfonts.com/t/067e2e62633e6ae50defcdee98ae4b11.eot?#iefix") format("embedded-opentype"),
+       url("https://db.onlinewebfonts.com/t/067e2e62633e6ae50defcdee98ae4b11.woff") format("woff"),
+       url("https://db.onlinewebfonts.com/t/067e2e62633e6ae50defcdee98ae4b11.woff2") format("woff2"),
+       url("https://db.onlinewebfonts.com/t/067e2e62633e6ae50defcdee98ae4b11.ttf") format("truetype"),
+       url("https://db.onlinewebfonts.com/t/067e2e62633e6ae50defcdee98ae4b11.svg#EugenioSansTextWebMedRegular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
-     @apply font-eugenio;
-   }
-   
+  font-family: "Eugenio Sans Text Web Med Regular", sans-serif;
+}

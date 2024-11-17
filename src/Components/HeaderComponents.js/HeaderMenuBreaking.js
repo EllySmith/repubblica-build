@@ -7,7 +7,7 @@ function HeaderMenuBreaking({item}) {
   };
 
   return (
-     <div className="relative inline-block group">
+     <div className="z-0 transform hover:scale-110 transition duration-300 inline-block group">
      <button
        className=""
        onClick={handleClick}

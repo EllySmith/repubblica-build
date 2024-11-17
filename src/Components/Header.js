@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const articles = ['Sezioni', 'Edizioni Locali', 'Il Quotidiano', 'Servizi', 'A-Z'];
+  const headerMenuItems = useSelector((state) => state.content.headerMenuItems)
   const breaking = useSelector((state) => state.content.menuItems)
 
   return (
@@ -18,16 +18,16 @@ function Header() {
         Menu
       </button>
       
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:block`}>
-        <div className="lg:flex flex-wrap justify-center space-y-2 lg:space-y-0 lg:space-x-4 my-4 font-bold">
-          {articles.map((article, index) => (
+      <div className={`${isMenuOpen ? 'block' : 'hidden'} lg:block relative`}>
+        <div className="lg:flex flex-wrap justify-center space-y-2 lg:space-y-0 lg:space-x-4 my-4 font-bold z-0">
+          {headerMenuItems.map((article, index) => (
             <HeaderMenuCategory key={index} item={article} />
           ))}
         </div>
       </div>
 
       <div className="overflow-x-auto">
-        <div className="flex whitespace-nowrap justify-start lg:justify-center items-center space-x-4 my-4 bg-gray-200 h-[5vh] border-t-2 border-b-2 border-black px-4">
+        <div className="flex whitespace-nowrap justify-start lg:justify-center items-center space-x-4 my-4 bg-gray-200 h-[5vh] border-t-2 border-b-2 border-red-700 px-4">
           {breaking.map((article, index) => (
             <HeaderMenuBreaking key={index} item={article} />
           ))}
