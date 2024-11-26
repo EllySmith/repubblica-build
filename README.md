@@ -1,5 +1,8 @@
 🚧 🚧 🚧 **UNDER CONSTRUCTION** 🚧 🚧 🚧
 
+![Vercel](https://vercel.com/ellysmiths-projects/repubblica-build/badge)
+
+
 # New Build Template for LaRepubblica
 
 The build template of La Repubblica is not good, so I made a new one!

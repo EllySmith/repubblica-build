@@ -1,6 +1,9 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
+import { fetchScrapedData, toggleModal } from '../../store/modalSlice';
 
 function HeaderMenuBreaking({item}) {
+  const dispatch = useDispatch();
   const {text, url} = item;
   const handleClick = () => {
     window.location.href = url;
