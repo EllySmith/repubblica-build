@@ -1,6 +1,7 @@
 🚧 🚧 🚧 **UNDER CONSTRUCTION** 🚧 🚧 🚧
 
-![Vercel](https://vercel.com/ellysmith/repubblica-build/badge)
+[![Vercel Status](https://vercel.com/ellysmiths-projects/repubblica-build/status)](https://vercel.com/vercel.com/ellysmiths-projects/
+repubblica-build)
 
 
 # New Build Template for LaRepubblica
