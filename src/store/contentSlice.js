@@ -62,7 +62,7 @@ const initialState = {
           { category: "Londra", link: "https://www.repubblica.it/londra/?ref=RHHD-MS" },
           { category: "Elezioni", link: "https://elezioni.repubblica.it/?ref=RHHD-MS" },
           { category: "Mondo Solidale", link: "https://www.repubblica.it/solidarieta/?ref=RHHD-MS" },
-          { category: "Repubblica@Scuola", link: "https://scuola.repubblica.it/?ref=RHHD-MS" },
+          { category: "@Scuola", link: "https://scuola.repubblica.it/?ref=RHHD-MS" },
      ],
 };
 
