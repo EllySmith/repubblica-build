@@ -54,3 +54,6 @@ node server.js
 Now start the web app 
 
 npm start
+
+
+![The app](public/screenshot.png)
