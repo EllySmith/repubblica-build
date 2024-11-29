@@ -17,12 +17,11 @@ function App() {
       <Header />
       <div className="lg:flex block mx-2 lg:m-4 border-2 border-black">
         <ArticleBox />
-        <NavigationBox isMobileMenuOpen={isMobileMenuOpen} />
+        <NavigationBox />
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="lg:hidden fixed bottom-4 right-4 bg-black text-white p-2 rounded-full shadow-lg"
-        >
-          <Menu size={24} />
+        > 
         </button>
       </div>
       <Modal />

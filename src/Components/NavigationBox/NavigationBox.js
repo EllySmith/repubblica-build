@@ -1,8 +1,9 @@
 import React from 'react';
 import NavigationItem from './NavigationItem';
+import { useSelector } from 'react-redux';
 
 function NavigationBox({ isMobileMenuOpen }) {
-  const veryImportantSide = ['Economia', 'Politica', 'Arte', 'Calcio', 'Proteste', 'Roma', 'Clima'];
+  const veryImportantSide = useSelector((state) => state.content.sideBar);
   
   return (
     <div
