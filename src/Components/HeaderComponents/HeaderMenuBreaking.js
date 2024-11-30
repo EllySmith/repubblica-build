@@ -10,7 +10,7 @@ function HeaderMenuBreaking({item}) {
   };
 
   return (
-     <div className="z-0 transform hover:scale-110 transition duration-300 inline-block group">
+     <div className="z-0 transform hover:scale-110 transition duration-300 inline-block group px-4 py-2">
      <button
        className=""
        onClick={handleClick}

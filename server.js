@@ -28,8 +28,10 @@ app.get('/fetch-page', async (req, res) => {
       } else {
         importance = 'low';
       }
+      
+      const articleExists = articles.some(article => article.link === link);
 
-      if (title && body && cleanImageUrl) {
+      if (title && body && cleanImageUrl && !articleExists) {
         articles.push({ title, body, imageUrl, id, importance, link });
       }
     });
